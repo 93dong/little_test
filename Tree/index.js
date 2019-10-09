@@ -3,8 +3,8 @@ const Node = function (key) {
     this.left = null;
     this.right = null;
 };
-const Tree = function () {
-    this.root = null;
+const Tree = function (treeList) {
+    this.root = treeList ? this.insetList(treeList) : null;
 };
 // desc 插入节点
 Tree.prototype.insertNode = function (node, newNode) {
@@ -176,5 +176,4 @@ Tree.prototype.max = function () {
 
 const tree = new Tree();
 // tree.insetList([10, 5, 1, 9, 7, 16, 12, 20, 15, 18, 22]);
-tree.insetList([10, 5, 1, 9, 7, 16, 12, 20, 15, 18, 17,19,22,21,24]);
-
+tree.insetList([10, 5, 1, 9, 7, 16, 12, 20, 15, 18, 17,19,22,21,24])
